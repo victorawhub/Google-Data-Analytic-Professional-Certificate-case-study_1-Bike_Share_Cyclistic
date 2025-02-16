@@ -1,3 +1,8 @@
+-- check the total rows of data for the entire year
+select 
+  count(*) as ride_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+  
 -- check the null values for each columns 
 
 select 
