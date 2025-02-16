@@ -1,4 +1,4 @@
--- check the total rows of data for the entire year
+-- check the total rows of data for the entire year 
 select 
   count(*) as ride_id
 from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
@@ -20,3 +20,17 @@ select
   count(*) - count(end_lng) end_lng,
   count(*) - count(member_casual) member_casual
 from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+
+-- checking duplicate rows 
+select 
+count(ride_id) - count (distinct ride_id) as duplicate_ride_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+
+-- checking length of ride_id 
+select length(ride_id) as length_ride_id, count(ride_id) as no_of_rows 
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+group by length_ride_id
+
+-- checking rideable_type 
+
+
