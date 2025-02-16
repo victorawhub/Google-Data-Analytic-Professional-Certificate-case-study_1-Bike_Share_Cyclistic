@@ -1,6 +1,1 @@
 -- combining data from Jan 2022 to Dec 2022 into single table
-
-```sql
-select * from 'my-project-dana-390116.Cyclistics.202201-divvy-tripdata'
-union all
-```
