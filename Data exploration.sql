@@ -32,5 +32,77 @@ from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
 group by length_ride_id
 
 -- checking rideable_type 
+select distinct rideable_type, 
+count(rideable_type) as no_vehicle 
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+group by rideable_type 
 
+-- started/ ended at present TIMESTAMP - YYYY-MM-DD hh:mm:ss UTC
+select max (
+  extract (hour from(ended_at - started_at)) * 60 +
+  extract (Minute from(ended_at - started_at)) + 
+  extract (second from(ended_at - started_at)) / 60 ) as longest_ride_length,
+  min (
+   extract (hour from (ended_at - started_at)) * 60 +
+   extract (minute from (ended_at - started_at)) +
+   extract (second from (ended_at - started_at)) / 60 ) as shortest_ride_length,
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+
+-- To solve the negative value, Filter out the negative value
+SELECT MAX(ride_length) AS longest_ride_length,
+       MIN(ride_length) AS shortest_ride_length
+FROM (
+  SELECT 
+    (EXTRACT(HOUR FROM (ended_at - started_at)) * 60 +
+     EXTRACT(MINUTE FROM (ended_at - started_at)) +
+     EXTRACT(SECOND FROM (ended_at - started_at)) / 60) AS ride_length
+  from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+) 
+WHERE ride_length >= 0
+
+-- To find out the problematic rows
+SELECT * 
+FROM `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+WHERE ended_at < started_at;
+
+-- calculate usage time of bike more than a day (1440 mins in a day)
+select count(*) AS more_than_a_day
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where (
+  extract(HOUR from (ended_at - started_at)) * 60 +
+  extract(MINUTE from (ended_at - started_at)) +
+  extract(SECOND from (ended_at - started_at)) / 60) >= 1440
+
+-- calculate usage time of bike less than a minute 
+select count(*) AS less_than_a_day
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where (
+  extract(HOUR from (ended_at - started_at)) * 60 +
+  extract(MINUTE from (ended_at - started_at)) +
+  extract(SECOND from (ended_at - started_at)) / 60) <= 1
+
+-- Find out how many number of rows in start_stastion_name, start_station_id, end_station_name, end_station_id
+
+select count (distinct start_station_name) as number_unique_station
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`;
+
+select count (distinct start_station_id) as number_unique_station_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`;
+
+select count(ride_id) as rows_missing_start_station_value
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where start_station_name is null or start_station_id is null; 
+
+select count(distinct end_station_name) as number_of_end_unique_station
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`;
+
+select count(distinct end_station_id) as number_of_end_unique_station_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`;
+
+select count(ride_id) as rows_missing_end_station_value
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where end_station_name is null or end_station_id is null; 
+
+-- Find out the number of rows if start_station_name / start_station_id / end_station_name / end_station_id is null, 
+but have value in each of the table
 
