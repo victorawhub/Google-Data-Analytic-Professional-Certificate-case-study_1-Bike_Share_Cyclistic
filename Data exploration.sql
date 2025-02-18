@@ -103,6 +103,66 @@ select count(ride_id) as rows_missing_end_station_value
 from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
 where end_station_name is null or end_station_id is null; 
 
--- Find out the number of rows if start_station_name / start_station_id / end_station_name / end_station_id is null, 
-but have value in each of the table
+
+-- Find out the null value in start_station_name
+select count(*) as null_start_station_name
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where start_station_name is null 
+
+
+-- Find out the null value in start_station_id
+select count(*) as null_start_station_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where start_station_id is null 
+
+  
+-- Find out the start_station_name has name but no start_station_id
+select count(*) as start_station_name_missing_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where start_station_name is not null and start_station_id is null 
+
+  
+-- Find out the start_station_id has id number but no start_station_name
+select count(*) as start_station_id_missing_name
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where start_station_name is null and start_station_id is not null 
+
+
+-- Find out the both start station name and id are null
+select count(*) as null_start_station_name_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where start_station_name is null and start_station_id is null 
+
+
+-- Find out the null value in end_station_name
+select count(*) as null_end_station_name
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where end_station_name is null
+
+
+-- Find out the null value in end_station_id
+select count(*) as null_end_station_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where end_station_id is null
+
+
+-- Find out the end_station_name has name but no end_station_id
+select count(*) as end_station_name_missing_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where end_station_name is not null and end_station_id is null 
+
+  
+-- Find out the end_station_id has id number but no end_station_name
+select count(*) as end_station_id_missing_name
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where end_station_name is null and end_station_id is not null 
+
+
+-- Find out the both end station name and id are null
+select count(*) as null_end_station_name_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where end_station_name is null and end_station_id is null 
+
+
+-- check start_lat / start_lng / end_lat / end_lng
 
