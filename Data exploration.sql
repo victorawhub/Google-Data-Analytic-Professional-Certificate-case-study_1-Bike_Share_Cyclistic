@@ -165,4 +165,24 @@ where end_station_name is null and end_station_id is null
 
 
 -- check start_lat / start_lng / end_lat / end_lng
+select count(ride_id) as null_lat_lng
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where start_lat is null or start_lng is null
 
+select count(ride_id) as null_lat_lng
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where start_lat is null and start_lng is null
+
+select count(ride_id) as null_lat_lng
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where end_lat is null or end_lng is null
+
+select count(ride_id) as null_lat_lng
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+where end_lat is null and end_lng is null
+
+
+-- check member_casual
+select member_casual, count(member_casual) as no_of_trip 
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+group by member_casual
