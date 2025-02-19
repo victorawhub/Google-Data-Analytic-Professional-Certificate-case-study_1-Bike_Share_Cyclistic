@@ -63,7 +63,7 @@ WHERE ride_length >= 0
 -- To find out the problematic rows
 SELECT * 
 FROM `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
-WHERE ended_at < started_at;
+WHERE ended_at < started_at
 
 -- calculate usage time of bike more than a day (1440 mins in a day)
 select count(*) AS more_than_a_day
