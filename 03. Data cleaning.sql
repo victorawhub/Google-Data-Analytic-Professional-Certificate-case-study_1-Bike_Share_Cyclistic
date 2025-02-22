@@ -43,9 +43,10 @@ select *,
   ride_length >= 1440
   order by ride_length desc 
 
-
--- Find out how many ride_length > 1 min and < 1 day, and create the day of week and month columns 
-select *, 
+  
+-- Create a new table for ride_length > 1 min and < 1 day, and create the day of week and month columns 
+  create table Cycalitic_Trips.clean2_combined_table_2022 as
+  select *, 
    from`lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
   where start_station_name is not null and 
   end_station_name is not null and
