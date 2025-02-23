@@ -80,24 +80,6 @@ group by member_casual, end_station_name
 order by member_casual, end_station_name
 
 
--- start location
-select member_casual, start_station_name,
-avg(start_lat) as avg_start_lat, avg(start_lng) as avg_start_lng, 
-count (ride_id) as total_trip
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
-group by member_casual, start_station_name
-order by member_casual, start_station_name
-
-
--- end location
-select member_casual, end_station_name,
-avg(end_lat) as avg_end_lat, avg(end_lng) as avg_end_lng, 
-count (ride_id) as total_trip
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
-group by member_casual, end_station_name
-order by member_casual, end_station_name
-
-
 -- mode month 
 select rnk, member_casual, month, cnt
 from 
@@ -147,15 +129,17 @@ order by rnk
 
 
 -- ranking start location
-Select rnk, member_casual, start_station_name, start_lat, start_lng, cnt
+Select rnk, member_casual, start_station_name, start_lat, start_lng, total_trip
 from
 (
-  select member_casual, start_station_name, start_lat, start_lng, cnt, dense_rank() 
-  over (order by cnt desc) as rnk
+  select member_casual, start_station_name, start_lat, start_lng, total_trip, dense_rank() 
+  over (order by total_trip desc) as rnk
   from 
   (
-    select member_casual, start_station_name, avg(start_lat) as start_lat, avg(start_lng) as start_lng, count(*) as cnt
-    from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
+   select member_casual, start_station_name,
+    avg(start_lat) as start_lat, avg(start_lng) as start_lng, 
+    count (*) as total_trip
+    from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
     group by member_casual, start_station_name
   )
 )
@@ -163,15 +147,17 @@ order by rnk
 
 
 --- ranking end location
-Select rnk, member_casual, end_station_name, end_lat, end_lng, cnt
+Select rnk, member_casual, end_station_name, end_lat, end_lng, total_trip
 from
 (
-  select member_casual, end_station_name, end_lat, end_lng, cnt, dense_rank() 
-  over (order by cnt desc) as rnk
+  select member_casual, end_station_name, end_lat, end_lng, total_trip, dense_rank() 
+  over (order by total_trip desc) as rnk
   from 
   (
-    select member_casual, end_station_name, avg(end_lat) as end_lat, avg(end_lng) as end_lng, count(*) as cnt
-    from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
+    select member_casual, end_station_name,
+    avg(end_lat) as end_lat, avg(end_lng) as end_lng, 
+    count (*) as total_trip
+    from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
     group by member_casual, end_station_name
   )
 )
