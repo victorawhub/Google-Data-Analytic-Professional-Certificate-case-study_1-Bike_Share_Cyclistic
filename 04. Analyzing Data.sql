@@ -9,7 +9,7 @@ order by member_casual, total_trip_rideable
 -- No of user type per month
 select member_casual, month,
 count(*) as total_trip_month
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
 group by member_casual, month
 order by member_casual
 
@@ -17,7 +17,7 @@ order by member_casual
 --No of user type per day
 select member_casual, day_of_week,
 count(*) as total_trip_day
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
 group by member_casual, day_of_week
 order by member_casual, total_trip_day
 
@@ -26,7 +26,7 @@ order by member_casual, total_trip_day
 select member_casual, day_of_week, 
 extract(HOUR from started_at) as hour_of_day, 
 count(*) as total_trip_hour
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
 group by member_casual, day_of_week, hour_of_day
 order by member_casual, day_of_week, total_trip_hour
 
@@ -34,7 +34,7 @@ order by member_casual, day_of_week, total_trip_hour
 -- avg ride length per vehicle
 select member_casual, rideable_type,
 avg(ride_length) as avg_travel_duration_vehicle
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
 group by member_casual,rideable_type
 order by member_casual,rideable_type
 
@@ -42,7 +42,7 @@ order by member_casual,rideable_type
 -- avg ride length per user type per month
 select member_casual, month,
 avg(ride_length) as avg_travel_duration_month 
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
 group by member_casual, month
 order by member_casual, month
 
@@ -50,7 +50,7 @@ order by member_casual, month
 -- avg ride length per user type per day
 select member_casual, day_of_week,
 avg(ride_length) as avg_travel_duration_day
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
 group by member_casual, day_of_week
 order by member_casual, day_of_week
 
@@ -59,7 +59,7 @@ order by member_casual, day_of_week
 select member_casual, day_of_week,
 extract(hour from started_at) as hour_of_day,
 avg(ride_length) as avg_travel_duration_hour
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
 group by member_casual, day_of_week, hour_of_day
 order by member_casual, day_of_week, hour_of_day
 
@@ -67,24 +67,24 @@ order by member_casual, day_of_week, hour_of_day
 -- avg ride start
 select member_casual, start_station_name,
 avg(extract(HOUR from started_at)) as avg_started_at
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
 group by member_casual, start_station_name
 order by member_casual, start_station_name
 
   
 -- avg ride end
-select member_casual, start_station_name,
+select member_casual, end_station_name,
 avg(extract(HOUR from ended_at)) as avg_ended_at
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
-group by member_casual, start_station_name
-order by member_casual, start_station_name
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
+group by member_casual, end_station_name
+order by member_casual, end_station_name
 
 
 -- avg start location
 select member_casual, start_station_name,
 avg(start_lat) as avg_start_lat, avg(start_lng) as avg_start_lng, 
 count (ride_id) as total_trip
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
 group by member_casual, start_station_name
 order by member_casual, start_station_name
 
@@ -93,7 +93,7 @@ order by member_casual, start_station_name
 select member_casual, end_station_name,
 avg(end_lat) as avg_end_lat, avg(end_lng) as avg_end_lng, 
 count (ride_id) as total_trip
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
 group by member_casual, end_station_name
 order by member_casual, end_station_name
 
@@ -107,7 +107,7 @@ from
   from 
   (
     select member_casual, month, count(*) as cnt
-    from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+    from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
     group by member_casual, month
   )
 )
@@ -123,7 +123,7 @@ from
     from 
     (
       select member_casual, day_of_week, count(*) as cnt
-      from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+      from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
       group by member_casual, day_of_week
     )
 )
@@ -139,7 +139,7 @@ from
   from 
   (
     select member_casual, day_of_week, extract(hour from started_at) as hour_of_day, count(*) as cnt
-    from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+    from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
     group by member_casual, day_of_week, hour_of_day
   )
 )
@@ -155,7 +155,7 @@ from
   from 
   (
     select member_casual, start_station_name, avg(start_lat) as start_lat, avg(start_lng) as start_lng, count(*) as cnt
-    from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+    from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
     group by member_casual, start_station_name
   )
 )
@@ -171,7 +171,7 @@ from
   from 
   (
     select member_casual, end_station_name, avg(end_lat) as end_lat, avg(end_lng) as end_lng, count(*) as cnt
-    from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean_combined_table_2022`
+    from  `lithe-bazaar-443112-i8.Cycalitic_Trips.clean2_combined_table_2022`
     group by member_casual, end_station_name
   )
 )
