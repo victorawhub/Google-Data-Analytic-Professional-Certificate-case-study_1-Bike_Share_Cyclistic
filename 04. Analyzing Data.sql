@@ -80,7 +80,7 @@ group by member_casual, end_station_name
 order by member_casual, end_station_name
 
 
--- avg start location
+-- start location
 select member_casual, start_station_name,
 avg(start_lat) as avg_start_lat, avg(start_lng) as avg_start_lng, 
 count (ride_id) as total_trip
@@ -89,7 +89,7 @@ group by member_casual, start_station_name
 order by member_casual, start_station_name
 
 
--- avg end location
+-- end location
 select member_casual, end_station_name,
 avg(end_lat) as avg_end_lat, avg(end_lng) as avg_end_lng, 
 count (ride_id) as total_trip
