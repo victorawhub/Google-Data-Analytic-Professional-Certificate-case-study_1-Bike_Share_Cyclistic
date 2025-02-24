@@ -2,7 +2,7 @@
 Course: [Google Data Analytics Capstone: Complete a Case Study](https://www.coursera.org/learn/google-data-analytics-capstone) 
 
 I would like to give a big shout out to 
-[Mostafa Elsayed Morse Abdelfattah](https://www.linkedin.com/pulse/google-data-analytics-capstone-case-study-1-cyclisti-mostafa-elsobky/) and [Fillips](https://github.com/spillif/Case-Study-1-Google-Data-Analytics-Cyslistics) for their hard work, and thanks to them, I was able to complete this project. 
+[Mostafa Elsayed Morse Abdelfattah](https://www.linkedin.com/pulse/google-data-analytics-capstone-case-study-1-cyclisti-mostafa-elsobky/) and [Fillips](https://github.com/spillif/Case-Study-1-Google-Data-Analytics-Cyslistics) for their hardwork, and I very appreciate their effort to make this project and make it to the public. Because of their works, I was able to complete this project by following their guidance. 
 
 **Introduction**
 
