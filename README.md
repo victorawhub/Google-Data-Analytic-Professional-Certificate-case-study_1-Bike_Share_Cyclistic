@@ -2,22 +2,38 @@
 Course: [Google Data Analytics Capstone: Complete a Case Study](https://www.coursera.org/learn/google-data-analytics-capstone) 
 
 I would like to give a big shout out to 
-[Mostafa Elsayed Morse Abdelfattah](https://www.linkedin.com/pulse/google-data-analytics-capstone-case-study-1-cyclisti-mostafa-elsobky/) and [Fillips](https://github.com/spillif/Case-Study-1-Google-Data-Analytics-Cyslistics) for their hardwork, and I very appreciate their effort to make this project and make it to the public. Because of their works, I was able to complete this project by following their guidance. 
+[Mostafa Elsayed Morse Abdelfattah](https://www.linkedin.com/pulse/google-data-analytics-capstone-case-study-1-cyclisti-mostafa-elsobky/), [Samuel Higgins](https://medium.com/@higgins.samuel98/google-data-analytics-project-cyclistic-case-study-sql-tableau-49df62556213) and [Fillips](https://github.com/spillif/Case-Study-1-Google-Data-Analytics-Cyslistics) for their hardwork, and I very appreciate their effort to make this project and make it to the public. Because of their works, I was able to complete this project by following their guidance. 
 
-**Introduction**
+## Introduction
+Welcome to my first project as a junior data analyst for the Google Data Analytics Professional Certificate. After I completing the 8 courses in this professional journey and I had obtained Excel, BigQuery SQL, Tableau knowledges and skills. Therefore, I am very excited to take a challenge and apply the knowledge that I have learned into this real-world. This is my capstone project to mark the final step in completing the professional certificate which show my ability to analyse and extract insights from complex data. 
 
-Welcome to my first project as a junior data analyst for the Google Data Analytics Professional Certificate. After completing 8 courses in this professional track and acquiring a wealth of knowledge and skills, I am eager to apply what I have learned to a real-world challenge. This case study marks the final step in completing the professional certificate, allowing me to showcase my ability to analyse and extract insights from complex data. In this project, I will be working with a large dataset using Excel, SQL, BigQuery, and R language to demonstrate my proficiency in data analysis. I will also be visualizing my findings using Tableau. 
+In this project, I will be working with a large dataset using Excel and BigQuery to demonstrate my proficiency in data analysis. I will also be visualizing my findings using Tableau. In the interest of answering the key business questions, I will follow the 6 steps of basic concept of the data analysis process:
+
+1. Ask: A clear statement of the business task
+2. Prepare: A description of all data sources used
+3. Process: Documentation of any cleaning or manipulation of data
+4. Analyze:  A summary of my analysis
+5. Share: Supporting visualizations and key findings
+6. Act: My top three recommendations based on my analysis
+
+## About the Company
+A bike-share company called Cyclistic has launched in 2016, has grown significantly, boasting a fleet of 5,824 geotracked bicycles and 692 stations across Chicago. The program allows users to unlock bikes from one station and return them to any other station, offering flexible pricing plans such as single-ride passes, full-day passes, and annual memberships. Customers who opt for single-ride or full-day passes are categorized as casual riders, while those with annual memberships are considered Cyclistic members. The company’s finance analysts have determined that annual members are more profitable than casual riders, prompting the director of marketing, Moreno, to focus on converting casual riders into annual members as a key strategy for future growth.
+
+Moreno believes that targeting casual riders, who are already familiar with Cyclistic and use its services, presents a significant opportunity for conversion. To achieve this, the marketing team aims to better understand the differences between annual members and casual riders, identify the reasons casual riders might purchase memberships, and explore how digital media can enhance marketing efforts. By analyzing Cyclistic’s historical bike trip data, the team hopes to uncover trends and insights that will inform effective marketing strategies to convert casual riders into annual members, ultimately driving the company’s growth and profitability.
+
+## Scenario
+I am a junior data analyst working on the marketing analyst team at Cyclistic, a bike-share company in Chicago. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, my team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, my team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve my recommendations, so they must be backed up with compelling data insights and professional data visualizations.
 
 
-Data source: [divvy_tripdata](url) [accessed on 16 Feb 2025]
+**Quick Links**
+Data source: [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html) [accessed on 16 Feb 2025]
 
 SQL Queries:
-1. Data Combining
-2. Data Exploration
-3. Data Cleaning
-4. Data Analysis
+1. [Data Combining](https://github.com/victoraw97/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/01.%20Data%20exploration.sql)
+2. [Data Exploration](https://github.com/victoraw97/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/02.%20Data%20Combination.sql)
+3.[Data Cleaning](https://github.com/victoraw97/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/03.%20Data%20cleaning.sql)
+4. [Data Analysis](https://github.com/victoraw97/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/04.%20Analyzing%20Data.sql)
 
-R Studio Queries:
+Data Visualiztion: [Tableau](https://public.tableau.com/app/profile/victor.aw7685/viz/GoogleProfessionalAnalyticCaseStudy1-Cyclistic/Map) 
 
-
-Data Visualiztion: Tableau 
+**Ask**
