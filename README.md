@@ -64,13 +64,15 @@ Moreno has assigned you the first question to answer: **How do annual members an
         + Activity log
   > From these insights, my team will design a new marketing strategy to convert casual riders into annual members.
 
-### Identified the business task
+#### Identified the business task
 The aim of the business task is to study the variations between how member and casual rider use Cyclistic bike.
 The idea is to use this data to create a new marketing strategies to convert casual riders into annual members because Moreno wants to maximize the number of annual memberships. 
 
 #### Identified Key Stakeholders
 **The director of marketing**: who is responsible for the development of campaigns and initiatives to promote the bike-share program.
+
 **The Cyclistic executive team**: who is notoriously detail-oriented and will decide whether to approve the recommended marketing program.
+
 **The Cyclistic marketing analytics team**: which is a team of data analysts who are responsible for collecting, analysing, and reporting data that helps guide marketing strategies.
 
 ## Prepare
