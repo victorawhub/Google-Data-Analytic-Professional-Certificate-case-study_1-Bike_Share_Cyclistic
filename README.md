@@ -38,3 +38,46 @@ SQL Queries:
 Data Visualiztion: [Tableau](https://public.tableau.com/app/profile/victor.aw7685/viz/GoogleProfessionalAnalyticCaseStudy1-Cyclistic/Map) 
 
 ## Ask
+1. How do annual members and casual riders use Cyclistic bikes differently?
+2. Why would casual riders buy Cyclistic annual memberships?
+3. How can Cyclistic use digital media to influence casual riders to become members?
+
+Moreno has assigned you the first question to answer: **How do annual members and casual riders use Cyclistic bikes differently?**
+
+### Breakdown the first question
+1. What is the problem I am trying to solve?
+   - Difference between the member and casual users
+      + How casual and member use Cyclistics
+      + Cyclistics information: travelling distance, vehicle types and member types
+   - Growth per month   
+      + The usage of numbers (casual vs member) -> To focus on casual type activity and vehicle type
+
+2. How can my insights drive business decisions?
+   - Providing the difference between member types
+      + Their activity impacts their pricing plan decision
+      + The most active station
+   - Providing the daily usage of casual and member type
+   - Insight into the Cyclistic metrics:
+      - Member Behaviours
+        + Rideable Type
+        + Travelling type
+        + Activity log
+  > From these insights, my team will design a new marketing strategy to convert casual riders into annual members.
+
+### Identified the business task
+The aim of the business task is to study the variations between how member and casual rider use Cyclistic bike.
+The idea is to use this data to create a new marketing strategies to convert casual riders into annual members because Moreno wants to maximize the number of annual memberships. 
+
+#### Identified Key Stakeholders
+**The director of marketing**: who is responsible for the development of campaigns and initiatives to promote the bike-share program.
+**The Cyclistic executive team**: who is notoriously detail-oriented and will decide whether to approve the recommended marketing program.
+**The Cyclistic marketing analytics team**: which is a team of data analysts who are responsible for collecting, analysing, and reporting data that helps guide marketing strategies.
+
+## Prepare
+### Data Source 
+
+I use the Cyclistic's histroical data for this project to analyze from Jan 2022 to Dec 2022 which can be downloaded from [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html). The data has been made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement).
+
+To organized the raw data, I had uploaded the data in the [google share drive](url)
+
+note to yourself - upload the raw data in the share drive
