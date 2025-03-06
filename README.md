@@ -9,12 +9,12 @@ Welcome to my first project as a junior data analyst for the Google Data Analyti
 
 In this project, I will be working with a large dataset using Excel and BigQuery to demonstrate my proficiency in data analysis. I will also be visualizing my findings using Tableau. In the interest of answering the key business questions, I will follow the 6 steps of basic concept of the data analysis process:
 
-1. Ask: A clear statement of the business task
-2. Prepare: A description of all data sources used
-3. Process: Documentation of any cleaning or manipulation of data
-4. Analyze:  A summary of my analysis
-5. Share: Supporting visualizations and key findings
-6. Act: My top three recommendations based on my analysis
+1. **Ask**: A clear statement of the business task
+2. **Prepare**: A description of all data sources used
+3. **Process**: Documentation of any cleaning or manipulation of data
+4. **Analyze**:  A summary of my analysis
+5. **Share**: Supporting visualizations and key findings
+6. **Act**: My top three recommendations based on my analysis
 
 ## About the Company
 A bike-share company called Cyclistic has launched in 2016, has grown significantly, boasting a fleet of 5,824 geotracked bicycles and 692 stations across Chicago. The program allows users to unlock bikes from one station and return them to any other station, offering flexible pricing plans such as single-ride passes, full-day passes, and annual memberships. Customers who opt for single-ride or full-day passes are categorized as casual riders, while those with annual memberships are considered Cyclistic members. The company’s finance analysts have determined that annual members are more profitable than casual riders, prompting the director of marketing, Moreno, to focus on converting casual riders into annual members as a key strategy for future growth.
