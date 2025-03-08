@@ -30,10 +30,10 @@ I am a junior data analyst working on the marketing analyst team at Cyclistic, a
 Data source: [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html) [accessed on 16 Feb 2025]
 
 SQL Queries:
-1. [Data Combining](https://github.com/victoraw97/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/01.%20Data%20exploration.sql)
-2. [Data Exploration](https://github.com/victoraw97/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/02.%20Data%20Combination.sql)
-3.[Data Cleaning](https://github.com/victoraw97/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/03.%20Data%20cleaning.sql)
-4. [Data Analysis](https://github.com/victoraw97/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/04.%20Analyzing%20Data.sql)
+1. [Data Combining](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/01.%20Data%20Combination.sql)
+2. [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/02.%20Data%20exploration.sql)
+3.[Data Cleaning](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/03.%20Data%20cleaning.sql)
+4. [Data Analysis](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/04.%20Analyzing%20Data.sql)
 
 Data Visualiztion: [Tableau](https://public.tableau.com/app/profile/victor.aw7685/viz/GoogleProfessionalAnalyticCaseStudy1-Cyclistic/Map) 
 
@@ -102,21 +102,61 @@ The data are taken from Divvy’s public historical trip data, this data is.
 
 
 ## Process
-I use BigQuery to combine the mothly data into single table from Jan to Dec 2022.
-
 I could not process in Excel or Spreadsheet because the maximum that these systems can handle only up to 1,048,576 rows.
+Cyclistic dataset has over the maximum Excel and Spreadsheet limit. Therefore, I use BigQuery to combine the mothly data into single table from Jan to Dec 2022.
+
+1. Uploading data
+Create dataset and loading raw data from share drive.
+
+2. Combining data
+Combine all the 18 csv files into one single new table named "combined_table_2022". FY 2022 contains 5,667,717 rows.
+
+3. Exporing data integrity
+  - Checking the duplication values for each fields
+  - Checking the duplication ride_id field
+  - ride_id is the primary key since it dedicated to each travel ride.
+     + ride_id maximum length is 16 characters.
+rideable_type contains 3 unique values: electric_bike, classic_bike, docked_bike.
+started_at/ ended_at present TIMESTAMP (YYYY-MM-DD hh:rr:ss UTC).
+Review the min/ max of ride length.
+Calculate the time usage: more than a day and less than a minute.
+Explore start_stastion_name / start_station_id / end_station_name / end_station_id
+Check if start_station_name / start_station_id / end_station_name / end_station_id is null but have value in each of the table.
+Check start_lat / start_lng / end_lat / end_lng.
+Check member_casual - 2 unique values: member and casual.
 
 ### Data Combination 
-BigQuery:  [Data Combination](https://github.com/victoraw97/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/01.%20Data%20Combination.sql)
-18 csv files are uploaded as tables in the dataset
-12 CSV files are uploaded as tables in the dataset '2022_tripdata'. Another table named "combined_data" is created, containing 5,667,717 rows of data for the entire year.
+BigQuery:  [Data Combination](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/01.%20Data%20Combination.sql)
+
+18 csv files are uploaded as tables in the dataset 'Cycalitic_Trips'. Another table named "combined_data_2022" is created, containing 5,667,717 rows of data for the entire year.
 
 ### Utilize SQL for Data Process
-1. I created a dataset named Cycalitic_Trips in BigQuery and uploaded all 12 csv files. 
+1. I created a dataset named Cycalitic_Trips in BigQuery and uploaded all 18 csv files. 
 2.	I encountered an issue with 6 of the files (from May to October 2022) as their csv file size exceeded the 100 MB limit for uploading to BigQuery. 
 3.	To resolve this, I split each of these files into two smaller files by using Power Query in Microsoft Excel and save them as csv UTF-8 format.
 4.	When I try to merge all the tables, I encountered an issue with the Month of June 2022 and September 2022 csv files, the data types are mismatch in these 2 csv files. Therefore, I use cast function and change all the data types as STRING.
-5.	I am able to merged all the tables into a single table named c**ombined_table_2022**.
+5.	I am able to merged all the tables into a single table named **combined_table_2022**.
 
 ![image](https://github.com/user-attachments/assets/296ba0a6-417c-4930-ab08-03fbe686fea4)
+
+### Data Exploration
+BigQuery: [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/02.%20Data%20exploration.sql)
+
+1. Check the duplication values for each fields
+![image](https://github.com/user-attachments/assets/c0fa0822-e079-4e14-9dbe-33e24ea03f0d)
+
+2. Check the duplication ride_id field. There is no Duplication of ride_id. 
+![image](https://github.com/user-attachments/assets/e3f48751-a750-4ff3-a16b-e09682c7341c)
+
+3. Check the total rows of data for the entire year 
+![image](https://github.com/user-attachments/assets/9d1082fa-6408-4805-9834-17bdc0a02577)
+
+4. Check the length of the ride_id. The minimum of length character ride_id is 7 and the maximum of length character ride_id is 16.
+![image](https://github.com/user-attachments/assets/0fb9c2f5-a88a-478d-8d72-a9d4ce9bfddc)
+
+5. Check the rideable_type. There are 3 unique types of bikes rideable_type in our data.
+![image](https://github.com/user-attachments/assets/27831077-1b2e-4c3f-a904-90052400b999)
+
+6. Find out the longest and shortest ride duration from started_at and ended_at follow TIMESTAMP - YYYY-MM-DD hh:mm:ss UTC.
+![image](https://github.com/user-attachments/assets/2aa8ac46-8dc5-4575-b44c-348f1ba1a592)
 
