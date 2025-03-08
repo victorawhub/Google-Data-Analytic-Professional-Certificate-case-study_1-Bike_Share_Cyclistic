@@ -116,12 +116,15 @@ Combine all the 18 csv files into one single new table named "combined_table_202
   - Checking the duplication ride_id field
   - ride_id is the primary key since it dedicated to each travel ride.
      + ride_id maximum length is 16 characters.
-rideable_type contains 3 unique values: electric_bike, classic_bike, docked_bike.
-started_at/ ended_at present TIMESTAMP (YYYY-MM-DD hh:rr:ss UTC).
-Review the min/ max of ride length.
-Calculate the time usage: more than a day and less than a minute.
-Explore start_stastion_name / start_station_id / end_station_name / end_station_id
-Check if start_station_name / start_station_id / end_station_name / end_station_id is null but have value in each of the table.
+  - rideable_type contains 3 unique values: electric_bike, classic_bike, docked_bike.
+  - the longest and shortest ride duration from started_at/ ended_at present TIMESTAMP (YYYY-MM-DD hh:rr:ss UTC).
+     + Filter out the negative value
+     + Identify the problematic row
+  -  Review the min/ max of ride length:
+     + Calculate the time usage: more than a day and less than a minute.
+  - Explore start_stastion_name / start_station_id / end_station_name / end_station_id
+  - Find out the null values in start_station_name, start_station_id, end_station_name, end_station_id.
+  - Check if start_station_name / start_station_id / end_station_name / end_station_id is null but have value in each of the table.
 Check start_lat / start_lng / end_lat / end_lng.
 Check member_casual - 2 unique values: member and casual.
 
@@ -143,20 +146,122 @@ BigQuery:  [Data Combination](https://github.com/victorawhub/Google-Data-Analyti
 BigQuery: [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/02.%20Data%20exploration.sql)
 
 1. Check the duplication values for each fields
+
+
 ![image](https://github.com/user-attachments/assets/c0fa0822-e079-4e14-9dbe-33e24ea03f0d)
 
-2. Check the duplication ride_id field. There is no Duplication of ride_id. 
+
+2. Check the duplication ride_id field. There is no Duplication of ride_id.
+
+ 
 ![image](https://github.com/user-attachments/assets/e3f48751-a750-4ff3-a16b-e09682c7341c)
 
-3. Check the total rows of data for the entire year 
+
+3. Check the total rows of data for the entire year
+
+
 ![image](https://github.com/user-attachments/assets/9d1082fa-6408-4805-9834-17bdc0a02577)
 
+
 4. Check the length of the ride_id. The minimum of length character ride_id is 7 and the maximum of length character ride_id is 16.
+
+
 ![image](https://github.com/user-attachments/assets/0fb9c2f5-a88a-478d-8d72-a9d4ce9bfddc)
 
+
 5. Check the rideable_type. There are 3 unique types of bikes rideable_type in our data.
+
+
 ![image](https://github.com/user-attachments/assets/27831077-1b2e-4c3f-a904-90052400b999)
 
+
 6. Find out the longest and shortest ride duration from started_at and ended_at follow TIMESTAMP - YYYY-MM-DD hh:mm:ss UTC.
+
+
 ![image](https://github.com/user-attachments/assets/2aa8ac46-8dc5-4575-b44c-348f1ba1a592)
+
+
+There is a negative value in the table. It could be the timestamp were logged incorrectly in the field ended_at or the timestamps were recorded in different time zones.
+
+
+7. To solve the negative value, Filter out the negative value
+
+
+![image](https://github.com/user-attachments/assets/b461ffde-8b68-451d-a895-e6cb56d9aeb9)
+
+
+8. Identify the problematic row
+
+
+![image](https://github.com/user-attachments/assets/ff092d86-7107-4842-a6aa-f8e66bddfb06)
+
+
+Total 86 rows error where the time interval in ended_at is earlier and before the started_at. 
+
+
+9. Calculate the usage time more than or equal to a day (1440 mins in a day)
+
+
+![image](https://github.com/user-attachments/assets/fd21f34f-5d5d-419b-888b-a1032bfe0bf0)
+
+
+10. Calculate the usage time less than or equal to a minute
+
+
+![image](https://github.com/user-attachments/assets/f2d6332d-2ac0-47b5-a5d7-62243de0bb6e)
+
+
+11. Find out how many number of rows in start_stastion_name, start_station_id, end_station_name, end_station_id
+
+
+start_station_name
+
+![image](https://github.com/user-attachments/assets/404e3538-72b5-4f5f-86b1-a6f8fa4a7791)
+
+
+start_station_id
+
+![image](https://github.com/user-attachments/assets/d0628884-18ef-4a98-8f76-efe12fbbf176)
+
+
+rows of missing start station name & id
+
+![image](https://github.com/user-attachments/assets/4f755fea-56d8-4f1b-8d68-ea67d3e34efd)
+
+
+end_station_name
+
+![image](https://github.com/user-attachments/assets/6ab2f6fc-0fa8-4e10-81ae-c6d27e6216fb)
+
+
+end_station_id
+
+![image](https://github.com/user-attachments/assets/1264cd35-d950-4ebf-9996-6938009c683c)
+
+
+rows of missing end station name & id
+
+![image](https://github.com/user-attachments/assets/4d707fae-dd34-460c-ac5a-a1bb20fd1410)
+
+
+12. Find out the null values in start_station_name, start_station_id, end_station_name, end_station_id.
+
+start_station_name
+
+![image](https://github.com/user-attachments/assets/4550869e-3691-4673-b21a-c6031d8972e0)
+
+
+start_station_id
+
+![image](https://github.com/user-attachments/assets/f9baacd8-bb49-42b3-a425-b1bb4c8af768)
+
+
+end_station_name
+
+![image](https://github.com/user-attachments/assets/bcb89024-8d12-4aa9-a551-d837dd350be6)
+
+
+end_station_id
+
+![image](https://github.com/user-attachments/assets/93ba5e26-8d66-4244-a2e8-268b0a40a515)
 
