@@ -1,4 +1,4 @@
-# Google Data Analytic Professional Certificate case study_1 Bike_Share_Cyclistic 
+![image](https://github.com/user-attachments/assets/21032f71-b82f-4cd4-9985-e1dea56a27dc)# Google Data Analytic Professional Certificate case study_1 Bike_Share_Cyclistic 
 Course: [Google Data Analytics Capstone: Complete a Case Study](https://www.coursera.org/learn/google-data-analytics-capstone) 
 
 I would like to give a big shout out to 
@@ -31,8 +31,11 @@ Data source: [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html
 
 SQL Queries:
 1. [Data Combining](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/01.%20Data%20Combination.sql)
+
 2. [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/02.%20Data%20exploration.sql)
+
 3.[Data Cleaning](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/03.%20Data%20cleaning.sql)
+
 4. [Data Analysis](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/04.%20Analyzing%20Data.sql)
 
 Data Visualiztion: [Tableau](https://public.tableau.com/app/profile/victor.aw7685/viz/GoogleProfessionalAnalyticCaseStudy1-Cyclistic/Map) 
@@ -69,11 +72,11 @@ The aim of the business task is to study the variations between how member and c
 The idea is to use this data to create a new marketing strategies to convert casual riders into annual members because Moreno wants to maximize the number of annual memberships. 
 
 #### Identified Key Stakeholders
-**The director of marketing**: who is responsible for the development of campaigns and initiatives to promote the bike-share program.
+ + **The director of marketing**: who is responsible for the development of campaigns and initiatives to promote the bike-share program.
 
-**The Cyclistic executive team**: who is notoriously detail-oriented and will decide whether to approve the recommended marketing program.
+ + **The Cyclistic executive team**: who is notoriously detail-oriented and will decide whether to approve the recommended marketing program.
 
-**The Cyclistic marketing analytics team**: which is a team of data analysts who are responsible for collecting, analysing, and reporting data that helps guide marketing strategies.
+ + **The Cyclistic marketing analytics team**: which is a team of data analysts who are responsible for collecting, analysing, and reporting data that helps guide marketing strategies.
 
 ## Prepare
 ### Data Location/Data Source 
@@ -125,8 +128,8 @@ Combine all the 18 csv files into one single new table named "combined_table_202
   - Explore start_stastion_name / start_station_id / end_station_name / end_station_id
   - Find out the null values in start_station_name, start_station_id, end_station_name, end_station_id.
   - Check if start_station_name / start_station_id / end_station_name / end_station_id is null but have value in each of the table.
-Check start_lat / start_lng / end_lat / end_lng.
-Check member_casual - 2 unique values: member and casual.
+  - Check start_lat / start_lng / end_lat / end_lng.
+  - Check the number of trips in both member and casual riders.
 
 ### Data Combination 
 BigQuery:  [Data Combination](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/01.%20Data%20Combination.sql)
@@ -145,123 +148,207 @@ BigQuery:  [Data Combination](https://github.com/victorawhub/Google-Data-Analyti
 ### Data Exploration
 BigQuery: [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/02.%20Data%20exploration.sql)
 
-1. Check the duplication values for each fields
+1. **Check the duplication values for each fields**
 
 
 ![image](https://github.com/user-attachments/assets/c0fa0822-e079-4e14-9dbe-33e24ea03f0d)
 
 
-2. Check the duplication ride_id field. There is no Duplication of ride_id.
+2. **Check the duplication ride_id field. There is no Duplication of ride_id.**
 
  
 ![image](https://github.com/user-attachments/assets/e3f48751-a750-4ff3-a16b-e09682c7341c)
 
 
-3. Check the total rows of data for the entire year
+3. **Check the total rows of data for the entire year**
 
 
 ![image](https://github.com/user-attachments/assets/9d1082fa-6408-4805-9834-17bdc0a02577)
 
 
-4. Check the length of the ride_id. The minimum of length character ride_id is 7 and the maximum of length character ride_id is 16.
+4. **Check the length of the ride_id** 
 
 
 ![image](https://github.com/user-attachments/assets/0fb9c2f5-a88a-478d-8d72-a9d4ce9bfddc)
 
 
-5. Check the rideable_type. There are 3 unique types of bikes rideable_type in our data.
+   The minimum of length character ride_id is 7 and the maximum of length character ride_id is 16.
+
+
+5. **Check the rideable_type** 
 
 
 ![image](https://github.com/user-attachments/assets/27831077-1b2e-4c3f-a904-90052400b999)
 
 
-6. Find out the longest and shortest ride duration from started_at and ended_at follow TIMESTAMP - YYYY-MM-DD hh:mm:ss UTC.
+   There are 3 unique types of bikes rideable_type in our data.
+
+6. **Find out the longest and shortest ride duration from started_at and ended_at follow TIMESTAMP - YYYY-MM-DD hh:mm:ss UTC.**
 
 
 ![image](https://github.com/user-attachments/assets/2aa8ac46-8dc5-4575-b44c-348f1ba1a592)
 
 
-There is a negative value in the table. It could be the timestamp were logged incorrectly in the field ended_at or the timestamps were recorded in different time zones.
+   There is a negative value in the table. It could be the timestamp were logged incorrectly in the field ended_at or the timestamps were recorded in different time zones.
 
 
-7. To solve the negative value, Filter out the negative value
+7. **To solve the negative value, Filter out the negative value**
 
 
 ![image](https://github.com/user-attachments/assets/b461ffde-8b68-451d-a895-e6cb56d9aeb9)
 
 
-8. Identify the problematic row
+8. **Identify the problematic row**
 
 
 ![image](https://github.com/user-attachments/assets/ff092d86-7107-4842-a6aa-f8e66bddfb06)
 
 
-Total 86 rows error where the time interval in ended_at is earlier and before the started_at. 
+   Total 86 rows error where the time interval in ended_at is earlier and before the started_at. 
 
 
-9. Calculate the usage time more than or equal to a day (1440 mins in a day)
+9. **Calculate the usage time more than or equal to a day (1440 mins in a day)**
 
 
 ![image](https://github.com/user-attachments/assets/fd21f34f-5d5d-419b-888b-a1032bfe0bf0)
 
 
-10. Calculate the usage time less than or equal to a minute
+10. **Calculate the usage time less than or equal to a minute**
 
 
 ![image](https://github.com/user-attachments/assets/f2d6332d-2ac0-47b5-a5d7-62243de0bb6e)
 
 
-11. Find out how many number of rows in start_stastion_name, start_station_id, end_station_name, end_station_id
+11. **Find out how many number of rows in start_stastion_name, start_station_id, end_station_name, end_station_id**
 
 
-start_station_name
+   **start_station_name**
 
 ![image](https://github.com/user-attachments/assets/404e3538-72b5-4f5f-86b1-a6f8fa4a7791)
 
 
-start_station_id
+   **start_station_id**
 
 ![image](https://github.com/user-attachments/assets/d0628884-18ef-4a98-8f76-efe12fbbf176)
 
 
-rows of missing start station name & id
+   **rows of missing start station name & id**
 
 ![image](https://github.com/user-attachments/assets/4f755fea-56d8-4f1b-8d68-ea67d3e34efd)
 
 
-end_station_name
+   **end_station_name**
 
 ![image](https://github.com/user-attachments/assets/6ab2f6fc-0fa8-4e10-81ae-c6d27e6216fb)
 
 
-end_station_id
-
+   **end_station_id**
+ 
 ![image](https://github.com/user-attachments/assets/1264cd35-d950-4ebf-9996-6938009c683c)
 
 
-rows of missing end station name & id
+   **rows of missing end station name & id**
 
 ![image](https://github.com/user-attachments/assets/4d707fae-dd34-460c-ac5a-a1bb20fd1410)
 
 
-12. Find out the null values in start_station_name, start_station_id, end_station_name, end_station_id.
+12. **Find out the null values in start_station_name, start_station_id, end_station_name, end_station_id.**
 
-start_station_name
+   **start_station_name**
 
 ![image](https://github.com/user-attachments/assets/4550869e-3691-4673-b21a-c6031d8972e0)
 
 
-start_station_id
+   **start_station_id**
 
 ![image](https://github.com/user-attachments/assets/f9baacd8-bb49-42b3-a425-b1bb4c8af768)
 
 
-end_station_name
+  **end_station_name**
 
 ![image](https://github.com/user-attachments/assets/bcb89024-8d12-4aa9-a551-d837dd350be6)
 
 
-end_station_id
+   **end_station_id**
 
 ![image](https://github.com/user-attachments/assets/93ba5e26-8d66-4244-a2e8-268b0a40a515)
+
+
+13. **Check if start_station_name / start_station_id / end_station_name / end_station_id is null but have value in each of the table.**
+
+
+   **start station name has name but no start station id**
+
+
+![image](https://github.com/user-attachments/assets/35819c0a-c0a9-4a73-b80c-244c4ad37510)
+
+
+
+   **start station id has id number but no start station name**
+
+
+![image](https://github.com/user-attachments/assets/3031c31d-ea36-4c43-80ad-11e3281e85f4)
+
+
+   **both start station name and id is null**
+
+
+![image](https://github.com/user-attachments/assets/6c252ca0-5b84-49d9-8091-92dc3afbc417)
+
+
+
+   **end station name has name but end station id is null**
+
+![image](https://github.com/user-attachments/assets/6c7729a5-20ef-4c7c-8a18-293bd3332653)
+
+
+
+   **end station id has id number but end station name is null**
+
+
+![image](https://github.com/user-attachments/assets/773865f3-ca0c-4c6e-8d01-2273c1d00316)
+
+
+
+   **both end station name and id are null**
+
+
+![image](https://github.com/user-attachments/assets/8297f579-f39f-43df-9ecd-defa4cb1f594)
+
+
+14.  **Check start_lat / start_lng / end_lat / end_lng**
+
+   **start_lat/start_lng**
+
+   Use Boolean logic 'or' 
+
+
+   ![image](https://github.com/user-attachments/assets/86aad3d6-e60a-4c3c-977b-884a35421254)
+
+
+   Use Boolean logic 'and'
+
+
+   ![image](https://github.com/user-attachments/assets/941f8604-11d6-47c3-ab39-57c427864a1f)
+
+
+
+  **end_lat/ end_lng data**
+
+  Use Boolean logic 'or' 
+
+ 
+  ![image](https://github.com/user-attachments/assets/a44797d6-1761-4094-af9f-e3f5062e3205)
+
+
+  Use Boolean logic 'and'
+
+
+  ![image](https://github.com/user-attachments/assets/f4be3700-ad7c-4d45-bc16-410560458d3d)
+
+
+
+15. **Check the number of trip in both member and casual riders**
+
+   ![image](https://github.com/user-attachments/assets/79ea7b6f-d484-4e94-b4c4-75ebe36dc970)
 
