@@ -400,3 +400,6 @@ First of all, I compare the bike types among member and casual riders.
 
 
 ![image](https://github.com/user-attachments/assets/c36c2375-e0e7-4f37-a588-106044f8a21e)
+
+
+Member users made up 60% of the total trips for the year of 2022. Among the vehicle types, classic and eletric bicycle are mostly used by Member. Member cyclists using classical bikes are almost double than casual. Casual bikers using all types of vehicle including Docked bike, which is not a favourable for the member.
