@@ -1,9 +1,4 @@
--- check the total rows of data for the entire year 
-select 
-  count(*) as ride_id
-from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
-  
--- check the null values for each columns 
+-- check the duplication values for each fields
 
 select 
   count(*) - count(ride_id) ride_id,
@@ -21,11 +16,16 @@ select
   count(*) - count(member_casual) member_casual
 from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
 
--- checking duplicate rows 
+-- checking duplicate ride_id field
 select 
 count(ride_id) - count (distinct ride_id) as duplicate_ride_id
 from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
 
+-- check the total rows of data for the entire year 
+select 
+  count(*) as ride_id
+from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
+  
 -- checking length of ride_id 
 select length(ride_id) as length_ride_id, count(ride_id) as no_of_rows 
 from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
