@@ -76,10 +76,33 @@ The idea is to use this data to create a new marketing strategies to convert cas
 **The Cyclistic marketing analytics team**: which is a team of data analysts who are responsible for collecting, analysing, and reporting data that helps guide marketing strategies.
 
 ## Prepare
-### Data Source 
+### Data Location/Data Source 
 
-I use the Cyclistic's histroical data for this project to analyze from Jan 2022 to Dec 2022 which can be downloaded from [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html). The data has been made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement).
+I use the Cyclistic's histroical data for this project to analyze from Jan 2022 to Dec 2022 which can be downloaded from [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html).
 
-To organized the raw data, I had uploaded the data in the [google share drive](url)
+### Download the Data
+I am going to analyze the year of 2022 and download the all the 12 months zip file from 2022.
 
-note to yourself - upload the raw data in the share drive
+### Data Organization
+To organized the raw data, I had uploaded the data in the [google share drive](https://drive.google.com/drive/folders/13R2SrMPY8uqYKA_-IrGwNBgPgfD-GLeR?usp=sharing).
+
+To keep the file organized and identify, I named all the csv files consistently. There are 18 files for 2022 with naming Sequel number. Month_YYYY. There are 6 csv files from May to October unable to upload to BigQuery due to exceed 100 MB limit, hence I use Microsoft Excel PowerQuery to split them into 2 batch with naming Month_YYYY_batch_sequel number.
+
+### Data Credibility ROCC?
+The data are taken from Divvy’s public historical trip data, this data is. 
+1. Reliable: This data is accurate, complete, and unbiased.
+2. Original: This data is validated by the original source. 
+3. Comprehensive: This data contains all the critical information and was collected appropriate to answer the questions. 
+4. Current: This data is up to date. But I only focus on FY 2022 to follow the guidance from them, [Mostafa Elsayed Morse Abdelfattah](https://www.linkedin.com/pulse/google-data-analytics-capstone-case-study-1-cyclisti-mostafa-elsobky/), [Samuel Higgins](https://medium.com/@higgins.samuel98/google-data-analytics-project-cyclistic-case-study-sql-tableau-49df62556213) and [Fillips](https://github.com/spillif/Case-Study-1-Google-Data-Analytics-Cyslistics) 
+5. Cited: This data is credible and citied from this [source](https://divvy-tripdata.s3.amazonaws.com/index.html)
+
+### Data License 
+1. The data has been made available by Motivate International Inc. under this [license](https://divvybikes.com/data-license-agreement).
+2. Do note that data privacy issues prohibit from accessing riders' personal identifiable information. This shows that I would not be able to connect the pass purchases to credite card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
+
+### Utilize SQL for Data Preparation
+1. I created a dataset named Cycalitic_Trips in BigQuery and uploaded all 12 csv files. 
+2.	I encountered an issue with 6 of the files (from May to October 2022) as their csv file size exceeded the 100 MB limit for uploading to BigQuery. 
+3.	To resolve this, I split each of these files into two smaller files by using Power Query in Microsoft Excel and save them as csv UTF-8 format.
+4.	When I try to merge all the tables, I encountered an issue with the Month of June 2022 and September 2022 csv files, the data types are mismatch in these 2 csv files. Therefore, I use cast function and change all the data types as STRING.
+5.	I am able to merged all the tables into a single table named combined_table_2022.
