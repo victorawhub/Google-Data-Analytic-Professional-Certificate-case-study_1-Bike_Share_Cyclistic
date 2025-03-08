@@ -74,7 +74,7 @@ where (
   extract(SECOND from (ended_at - started_at)) / 60) >= 1440
 
 -- calculate usage time of bike less than a minute 
-select count(*) AS less_than_a_day
+select count(*) AS less_than_a_minute
 from `lithe-bazaar-443112-i8.Cycalitic_Trips.combined_table_2022`
 where (
   extract(HOUR from (ended_at - started_at)) * 60 +
