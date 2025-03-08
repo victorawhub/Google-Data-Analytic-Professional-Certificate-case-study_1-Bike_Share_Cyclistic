@@ -133,7 +133,7 @@ Combine all the 18 csv files into one single new table named "combined_table_202
   - Check the number of trips in both member and casual riders.
 
 ### Data Combination 
-BigQuery:  [Data Combination](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/01.%20Data%20Combination.sql)
+SQL:  [Data Combination](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/01.%20Data%20Combination.sql)
 
 18 csv files are uploaded as tables in the dataset 'Cycalitic_Trips'. Another table named "combined_data_2022" is created, containing 5,667,717 rows of data for the entire year.
 
@@ -147,7 +147,7 @@ BigQuery:  [Data Combination](https://github.com/victorawhub/Google-Data-Analyti
 ![image](https://github.com/user-attachments/assets/296ba0a6-417c-4930-ab08-03fbe686fea4)
 
 ### Data Exploration
-BigQuery: [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/02.%20Data%20exploration.sql)
+SQL: [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/02.%20Data%20exploration.sql)
 
 1. **Check the duplication values for each fields**
 
@@ -353,3 +353,50 @@ BigQuery: [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic
 
    ![image](https://github.com/user-attachments/assets/79ea7b6f-d484-4e94-b4c4-75ebe36dc970)
 
+
+### Data Cleaning
+
+
+1. Find if can replace the null values.
+
+2. Removed all the results (rows) with null values.
+
+3. Created a new table with:
+
+  - **ride_length**: duration of the trip
+  - **day_of_week**: day starting the trip
+  - **month**: month extract from trip starting day
+
+4. **Find out how many ride_length > 1 day**
+
+
+![image](https://github.com/user-attachments/assets/85c31f0a-ac03-41ed-9b43-a023d60a3a51)
+
+
+  Those ride_length data with more than a day and will not consider this data to analyze, it will be clean out the data.
+
+
+5. **Create a new table for ride_length > 1 min and < 1 day**
+
+
+   ![image](https://github.com/user-attachments/assets/d0786e68-3c29-4c29-a7f4-98bfec34237c)
+
+
+This table will be taken into analysis. 
+
+
+
+## Analyze 
+
+SQL: [Data Analysis](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/04.%20Analyzing%20Data.sql)
+
+Data Visualiztion: [Tableau](https://public.tableau.com/app/profile/victor.aw7685/viz/GoogleProfessionalAnalyticCaseStudy1-Cyclistic/Map) 
+
+
+> How do annual members and casual riders use Cyclistic bikes differently? 
+
+
+First of all, I compare the bike types among member and casual riders.
+
+
+![image](https://github.com/user-attachments/assets/c36c2375-e0e7-4f37-a588-106044f8a21e)
