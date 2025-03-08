@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/21032f71-b82f-4cd4-9985-e1dea56a27dc)# Google Data Analytic Professional Certificate case study_1 Bike_Share_Cyclistic 
+# Google Data Analytic Professional Certificate case study_1 Bike_Share_Cyclistic 
 Course: [Google Data Analytics Capstone: Complete a Case Study](https://www.coursera.org/learn/google-data-analytics-capstone) 
 
 I would like to give a big shout out to 
