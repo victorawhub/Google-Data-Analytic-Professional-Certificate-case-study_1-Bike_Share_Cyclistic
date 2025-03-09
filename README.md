@@ -556,3 +556,18 @@ Start and end their journeys near parks, museums, along the coast and other recr
 
 ## Act 
 
+After sharing these findings about the differences between Casual and Member riders, the marketing department can start to develop marketing strategies to target Casual riders and persuade them to become Member riders.  
+
+Here are three of my recommendations:
+
+  + The Marketing Campaigns can be conducted before/during Spring and Summer seasons and on the weekend daytime (9 am - 5 pm) at the Casual riders’ favorable tourist/recreational locations.
+  + Since the Casual riders mostly using program on seasonal and weekend basis, we may introduce the new membership type: Seasonal pass, weekend-only pass or Day pass (24/ 48/72 hours pass).
+  + Marketing department can offer Cashback/Loyalty program for Casual riders when they convert to Member riders and offer discounts for longer rides may incentive Casual riders and attract Member riders to increase their riding time. 
+
+
+
+## Conclusion
+**Thank you for taking the time to read my capstone project!**
+
+This project allowed me to go through the entire data analysis process using real-world data and business questions. I am excited to continue growing in the field of data analysis.
+
