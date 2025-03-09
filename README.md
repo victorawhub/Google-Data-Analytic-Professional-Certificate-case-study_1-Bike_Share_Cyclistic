@@ -98,7 +98,7 @@ The data are taken from Divvy’s public historical trip data, this data is.
 1. Reliable: This data is accurate, complete, and unbiased.
 2. Original: This data is validated by the original source. 
 3. Comprehensive: This data contains all the critical information and was collected appropriate to answer the questions. 
-4. Current: This data is up to date. But I only focus on FY 2022 to follow the guidance from them, [Mostafa Elsayed Morse Abdelfattah](https://www.linkedin.com/pulse/google-data-analytics-capstone-case-study-1-cyclisti-mostafa-elsobky/), [Samuel Higgins](https://medium.com/@higgins.samuel98/google-data-analytics-project-cyclistic-case-study-sql-tableau-49df62556213) and [Fillips](https://github.com/spillif/Case-Study-1-Google-Data-Analytics-Cyslistics) 
+4. Current: This data is up to date. However, I only focus on FY 2022 to refer the projects from [Mostafa Elsayed Morse Abdelfattah](https://www.linkedin.com/pulse/google-data-analytics-capstone-case-study-1-cyclisti-mostafa-elsobky/), [Samuel Higgins](https://medium.com/@higgins.samuel98/google-data-analytics-project-cyclistic-case-study-sql-tableau-49df62556213) and [Fillips](https://github.com/spillif/Case-Study-1-Google-Data-Analytics-Cyslistics) 
 5. Cited: This data is credible and citied from this [source](https://divvy-tripdata.s3.amazonaws.com/index.html)
 
 ### Data License 
