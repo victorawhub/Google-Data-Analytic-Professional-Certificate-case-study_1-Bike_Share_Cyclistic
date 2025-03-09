@@ -111,12 +111,15 @@ I could not process in Excel or Spreadsheet because the maximum that these syste
 Cyclistic dataset has over the maximum Excel and Spreadsheet limit. Therefore, I use BigQuery to combine the mothly data into single table from Jan to Dec 2022.
 
 1. Uploading data
-Create dataset and loading raw data from share drive.
+
+ - Create dataset and loading raw data from share drive.
 
 2. Combining data
-Combine all the 18 csv files into one single new table named "combined_table_2022". FY 2022 contains 5,667,717 rows.
+
+ - Combine all the 18 csv files into one single new table named "combined_table_2022". FY 2022 contains 5,667,717 rows.
 
 3. Exporing data integrity
+
   - Checking the duplication values for each fields
   - Checking the duplication ride_id field
   - ride_id is the primary key since it dedicated to each travel ride.
