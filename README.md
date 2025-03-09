@@ -314,20 +314,32 @@ SQL: [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Prof
    **both end station name and id are null**
 
 
+
 ![image](https://github.com/user-attachments/assets/8297f579-f39f-43df-9ecd-defa4cb1f594)
+
+
 
 
 14.  **Check start_lat / start_lng / end_lat / end_lng**
 
+
+
    **start_lat/start_lng**
 
+
+
    Use Boolean logic 'or' 
+
+
 
 
    ![image](https://github.com/user-attachments/assets/86aad3d6-e60a-4c3c-977b-884a35421254)
 
 
+
    Use Boolean logic 'and'
+
+
 
 
    ![image](https://github.com/user-attachments/assets/941f8604-11d6-47c3-ab39-57c427864a1f)
@@ -336,13 +348,18 @@ SQL: [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Prof
 
   **end_lat/ end_lng data**
 
+
   Use Boolean logic 'or' 
+
+
 
  
   ![image](https://github.com/user-attachments/assets/a44797d6-1761-4094-af9f-e3f5062e3205)
 
 
+
   Use Boolean logic 'and'
+
 
 
   ![image](https://github.com/user-attachments/assets/f4be3700-ad7c-4d45-bc16-410560458d3d)
@@ -386,7 +403,7 @@ This table will be taken into analysis.
 
 
 
-## Analyze 
+## Analyze and Share
 
 SQL: [Data Analysis](https://github.com/victorawhub/Google-Data-Analytic-Professional-Certificate-case-study_1-Bike_Share_Cyclistic/blob/main/04.%20Analyzing%20Data.sql)
 
@@ -483,7 +500,7 @@ Based on the **Hours of the Day** line chart, For Member riders throughout the d
 ![image](https://github.com/user-attachments/assets/419a6ba4-bbf8-40d9-9d6f-0b399b2f9031)
 
 
-Look at the Grand Total:
+    Look at the Grand Total:
      + Member: 12.6 mins
      + Casual: 22.7 mins
 
@@ -494,4 +511,48 @@ Hence, 8:00 Am - 17:00 PM was the most favorite travel time for Member, while Ca
 
 I can assume that both Member and Casual riders are prefer using Cyclistics in Spring and Summer seasons. Member riders tend to using the bike from their space to work and vice versa during the working day peak hours (6 am to 8 am and 5 pm to 7 pm). Casual riders spends their leisure time using different types of bike to enjoy the weekends from 10 am to 2 pm. Casual riders have double up the usage duration than Member riders, and they starts to decline in ride in the evening from 5 pm to 8 pm. 
 
+
+##### For further understand the difference between Casual and Member Riders, I have to explore into their Start and End Location.
+
+
+  - **The preferred locations for Casual and Member riders**
+
+
+
+![image](https://github.com/user-attachments/assets/e72e33a4-d304-4b56-ae51-17bc7b61c7cd)
+
+
+   + **Member riders** began their trips between the stations that they are often visit: Universities, schools, parks, residential areas, public/ priveate instituations, their workplace, etc.
+
+
+   + **Casual riders** is in the opposite side while they are interested in travelling from famous places to city monuments (museums, parks, etc.). Their favorite location was habour coasts.
+
+
+Typically, Casual riders are mostly travellers, touris; while Member are domestic citizen (Chicagoans).
+
+
+
+  - **Top 50 Start and End Locations**
+
+
+
+![image](https://github.com/user-attachments/assets/c94f1954-2f3b-4193-be08-aac00a70908b)
+
+
+
+Casual riders have frequently started their trips from the stations in the vicinity of museums, parks, beaches, harbour points and aquariums; while Member riders have begun their journeys from stations close to universities, residential areas, restaurants, hospitals, grocery stores, theatre, schools, banks, factories, train stations, parks and plazas.
+
+
+**Summary of Insights:**
+
+Casual | Member 
+--- | ---
+Prefer using bikes during the daytime, more frequently over the weekends in Spring and Summer for leisure activities. | Prefer riding bikes on weekdays during the business hours (8 am - 5pm) in Spring and Summer, with a drop off in the winter months.
+Travel 2 times longer duration (average ride time = 22.5 mins) but less frequently (1.7 millions trips) than members | Travel more frequently (2.5 millions trips) but shorter ride duration (approximately half of casual riders' trip duration, average ride time = 12.2 mins)
+Utilize all the 3 different types of bikes: Classic, Electric and Docked bike | Did not ride Docked Bike
+Start and end their journeys near parks, museums, along the coast and other recreational sites | Start and end their trips close to universities, residential and commercial areas
+
+
+
+## Act 
 
