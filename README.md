@@ -443,17 +443,22 @@ Next, the Distribution of Total trip and Average Travel Time per month
 
 1. **Months**:
 
-- **Total trips per month**:
+**Total trips per month**:
 
 Both Member and Casual membership types are sharing their behaviour because their usage focus more during the Spring and Summer seasons. Both membership types shows decreasing usage when the winter starts. The number of casual riders using Cylistics increased at April and decreased right after July to August period. The trends for member riders is stretched up to October (before the winter season). Both of riders are share their favourable time in July.
 
 Based from Total Trips per month of the line chart, Summer was the great season for Cyclistsics.
-   + Member: Apr - Aug.
-   + Casual: May - Jul.
+  + Member: Apr - Aug.
+  + Casual: May - Jul.
 
-- **Average Travel Time per month**:
+
+
+**Average Travel Time per month**:
+
 
 Casual riders (travellers and tourist) spent more time for Cyclistics than member riders (residents, citizens, students, etc.)
+
+
 
 **The average of month in average travel time for**:
    + Member: 12.2 mins
@@ -471,7 +476,7 @@ Therefore, Average travel time of Casual riders are longer than Member riders th
 
  - **Total trips per Days of Week**:
 
-Member riders tended to prefer using Cyclistics on weekdays. On the other hand, travellers and tourists began their trip on the weekends. 
+Member riders tended to prefer using Cyclistics on weekdays. On the other hand, Casual riders began their trip on the weekends. 
 
 
 - **The average of the Day of Week in average travel time**:
@@ -491,7 +496,7 @@ Casual riders spent daily 24 minutes meanwhile Member riders are only 13 minutes
   - **Total Trips per Hours of the Day**:
 
 
-Member riders travels more often in early morning and evening (typical business hour). Early in the morning from 6 to 8 am when they go to work and evening from 5 to 7 pm when they go back home. Whereas, the number of trips for Casual riders starts to increase at 7 am and decrease at 5 pm. 
+Member riders travels more often in early morning and evening (typical business hour). Early in the morning from 6 to 8 am when they go to work and evening from 5 to 7 pm when they go back home. Whereas, the number of trips for Casual riders starts to increase at 8 am and decrease at 5 pm. 
 
 Both membership types are shows the same pattern in the line chart, the number of trips starts to decrease in evening 5 pm. 
 
@@ -510,7 +515,7 @@ Based on the **Hours of the Day** line chart, For Member riders throughout the d
 
 
 
-Hence, 8:00 Am - 17:00 PM was the most favorite travel time for Member, while Casual usually use Cyclistics from 12:00 PM - 17:00 PM.
+Hence, 6:00 Am - 17:00 PM was the most favorite travel time for Member, while Casual usually use Cyclistics from 10:00 AM - 17:00 PM.
 
 
 I can assume that both Member and Casual riders are prefer using Cyclistics in Spring and Summer seasons. Member riders tend to using the bike from their space to work and vice versa during the working day peak hours (6 am to 8 am and 5 pm to 7 pm). Casual riders spends their leisure time using different types of bike to enjoy the weekends from 10 am to 2 pm. Casual riders have double up the usage duration than Member riders, and they starts to decline in ride in the evening from 5 pm to 8 pm. 
