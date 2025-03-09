@@ -394,7 +394,7 @@ SQL: [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Prof
 ![image](https://github.com/user-attachments/assets/85c31f0a-ac03-41ed-9b43-a023d60a3a51)
 
 
-  Those ride_length data with more than a day and will not consider this data to analyze, it will be clean out the data.
+   + Those ride_length data with more than a day and will not consider this data to analyze, it will be clean out the data.
 
 
 5. **Create a new table for ride_length > 1 min and < 1 day**
@@ -403,7 +403,7 @@ SQL: [Data Exploration](https://github.com/victorawhub/Google-Data-Analytic-Prof
    ![image](https://github.com/user-attachments/assets/d0786e68-3c29-4c29-a7f4-98bfec34237c)
 
 
-This table will be taken into analysis. 
+   + This table will be taken into analysis. 
 
 
 
