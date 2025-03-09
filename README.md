@@ -561,7 +561,7 @@ After sharing these findings about the differences between Casual and Member rid
 Here are three of my recommendations:
 
   + The Marketing Campaigns can be conducted before/during Spring and Summer seasons and on the weekend daytime (9 am - 5 pm) at the Casual riders’ favorable tourist/recreational locations.
-  + Since the Casual riders mostly using program on seasonal and weekend basis, we may introduce the new membership type: Seasonal pass, weekend-only pass or Day pass (24/ 48/72 hours pass).
+  + Since the Casual riders mostly using program on seasonal and weekend basis, we may introduce the new membership type: Seasonal pass, weekend-only pass or Days pass (48/72 hours pass).
   + Marketing department can offer Cashback/Loyalty program for Casual riders when they convert to Member riders and offer discounts for longer rides may incentive Casual riders and attract Member riders to increase their riding time. 
 
 
