@@ -516,7 +516,7 @@ Hence, 8:00 Am - 17:00 PM was the most favorite travel time for Member, while Ca
 I can assume that both Member and Casual riders are prefer using Cyclistics in Spring and Summer seasons. Member riders tend to using the bike from their space to work and vice versa during the working day peak hours (6 am to 8 am and 5 pm to 7 pm). Casual riders spends their leisure time using different types of bike to enjoy the weekends from 10 am to 2 pm. Casual riders have double up the usage duration than Member riders, and they starts to decline in ride in the evening from 5 pm to 8 pm. 
 
 
-##### For further understand the difference between Casual and Member Riders, I have to explore into their Start and End Location.
+### For further understand the difference between Casual and Member Riders, I have to explore into their Start and End Location.
 
 
   - **The preferred locations for Casual and Member riders**
