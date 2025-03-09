@@ -472,7 +472,7 @@ Casual riders spent daily 24 minutes meanwhile Member riders are only 13 minutes
 
 Member riders travels more often in early morning and evening (typical business hour). Early in the morning from 6 to 8 am when they go to work and evening from 5 to 7 pm when they go back home. Whereas, the number of trips for Casual riders starts to increase at 7 am and decrease at 5 pm. 
 
-Both membership types are shows the same pattern in the line chart, the number of trips starts to decrease at evening 5 pm. 
+Both membership types are shows the same pattern in the line chart, the number of trips starts to decrease in evening 5 pm. 
 
 
   - **The average of the Hours of the Day in Average Travel Time**:
@@ -482,11 +482,16 @@ Based on the **Hours of the Day** line chart, For Member riders throughout the d
 
 ![image](https://github.com/user-attachments/assets/419a6ba4-bbf8-40d9-9d6f-0b399b2f9031)
 
-    Look at the Grand Total:
+
+Look at the Grand Total:
      + Member: 12.6 mins
      + Casual: 22.7 mins
 
 
+
 Hence, 8:00 Am - 17:00 PM was the most favorite travel time for Member, while Casual usually use Cyclistics from 12:00 PM - 17:00 PM.
 
-I can assume that both member and casual are prefer using Cyclistics in Spring and Summer. Members tend to using the bike from their space to work and vice versa. Casual spends their leisure time using different types of bikes to enjoy the weekends. Casual user cycle double the usage duration than members. Casual trasients also having a greater variation from their journeys, they travel more on spring and summer, and on the weekends from 10 am to 2 pm. Their duration tails off in the evening (5 to 8 pm).
+
+I can assume that both Member and Casual riders are prefer using Cyclistics in Spring and Summer seasons. Member riders tend to using the bike from their space to work and vice versa during the working day peak hours (6 am to 8 am and 5 pm to 7 pm). Casual riders spends their leisure time using different types of bike to enjoy the weekends from 10 am to 2 pm. Casual riders have double up the usage duration than Member riders, and they starts to decline in ride in the evening from 5 pm to 8 pm. 
+
+
